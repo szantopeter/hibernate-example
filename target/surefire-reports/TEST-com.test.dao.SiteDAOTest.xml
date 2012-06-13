@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="2.062" errors="4" skipped="0" tests="4" name="com.test.dao.SiteDAOTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.6.0_32/jre/lib/amd64"/>
+    <property name="java.vm.version" value="20.7-b02"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/pszanto/git/hibernate-example"/>
+    <property name="java.runtime.version" value="1.6.0_32-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/jdk1.6.0_32/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven2/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/lib/jvm/jdk1.6.0_32/jre/lib/amd64/server:/usr/lib/jvm/jdk1.6.0_32/jre/lib/amd64:/usr/lib/jvm/jdk1.6.0_32/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.2.0-24-generic"/>
+    <property name="user.home" value="/home/pszanto"/>
+    <property name="user.timezone" value="Europe/Budapest"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="user.name" value="pszanto"/>
+    <property name="java.class.path" value="/usr/share/maven2/boot/classworlds.jar"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk1.6.0_32/jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher &quot;install&quot;"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_32"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/jdk1.6.0_32/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk1.6.0_32/jre/lib/resources.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/rt.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/jce.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.6.0_32/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/jdk1.6.0_32/jre/classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="maven.home" value="/usr/share/maven2"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="1.77" classname="com.test.dao.SiteDAOTest" name="test">
+    <error message="org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1377)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:828)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:781)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:365)
+	at $Proxy26.find(Unknown Source)
+	at com.test.dao.SiteDAOTest.test(SiteDAOTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:122)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:146)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at $Proxy27.prepareStatement(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:147)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:166)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:145)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1711)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:828)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:289)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:259)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2033)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:82)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3719)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:449)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:418)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:204)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:251)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:148)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1079)
+	at org.hibernate.internal.SessionImpl.access$2200(SessionImpl.java:172)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2425)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:975)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:807)
+	... 42 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:127)
+	at org.h2.expression.Operation.optimize(Operation.java:171)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Alias.optimize(Alias.java:47)
+	at org.h2.command.dml.Select.prepare(Select.java:738)
+	at org.h2.command.Parser.prepare(Parser.java:202)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:434)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1071)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:234)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:138)
+	... 65 more
+</error>
+    <system-out>[2012-06-12 17:22:05,764] [AbstractEhcacheRegionFactory] WARN  HHH020003: Could not find a specific ehcache configuration for cache named [com.test.domain.Site]; using defaults.
+[2012-06-12 17:22:05,891] [AbstractEhcacheRegionFactory] WARN  HHH020003: Could not find a specific ehcache configuration for cache named [com.test.domain.Promotion]; using defaults.
+Hibernate: 
+    alter table site 
+        drop constraint FK35DF47F26D4C7D
+[2012-06-12 17:22:05,961] [SchemaExport] ERROR HHH000389: Unsuccessful: alter table site drop constraint FK35DF47F26D4C7D
+[2012-06-12 17:22:05,961] [SchemaExport] ERROR Table &quot;SITE&quot; not found; SQL statement:
+
+    alter table site 
+        drop constraint FK35DF47F26D4C7D [42102-140]
+Hibernate: 
+    drop table promotion if exists
+Hibernate: 
+    drop table site if exists
+Hibernate: 
+    create table promotion (
+        promotion_id integer not null,
+        name varchar(255),
+        primary key (promotion_id)
+    )
+Hibernate: 
+    create table site (
+        site_id integer not null,
+        country_code varchar(255),
+        login_time_limit integer,
+        default_promotion_id integer,
+        primary key (site_id)
+    )
+Hibernate: 
+    alter table site 
+        add constraint FK35DF47F26D4C7D 
+        foreign key (default_promotion_id) 
+        references promotion
+[2012-06-12 17:22:05,985] [AbstractEhcacheRegionFactory] WARN  HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+[2012-06-12 17:22:05,990] [AbstractEhcacheRegionFactory] WARN  HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+[2012-06-12 17:22:06,259] [SqlExceptionHelper] WARN  SQL Error: 42122, SQLState: 42S22
+[2012-06-12 17:22:06,259] [SqlExceptionHelper] ERROR Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+</system-out>
+  </testcase>
+  <testcase time="0.017" classname="com.test.dao.SiteDAOTest" name="testReadSiteBySiteId">
+    <error message="org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1377)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:828)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:781)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:365)
+	at $Proxy26.find(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:240)
+	at $Proxy23.find(Unknown Source)
+	at com.test.dao.jpa.SiteDAOJPA.readSiteBySiteId(SiteDAOJPA.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at $Proxy24.readSiteBySiteId(Unknown Source)
+	at com.test.dao.SiteDAOTest.testReadSiteBySiteId(SiteDAOTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:122)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:146)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at $Proxy27.prepareStatement(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:147)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:166)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:145)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1711)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:828)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:289)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:259)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2033)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:82)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3719)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:449)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:418)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:204)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:251)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:148)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1079)
+	at org.hibernate.internal.SessionImpl.access$2200(SessionImpl.java:172)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2425)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:975)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:807)
+	... 56 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:127)
+	at org.h2.expression.Operation.optimize(Operation.java:171)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Alias.optimize(Alias.java:47)
+	at org.h2.command.dml.Select.prepare(Select.java:738)
+	at org.h2.command.Parser.prepare(Parser.java:202)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:434)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1071)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:234)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:138)
+	... 79 more
+</error>
+    <system-out>[2012-06-12 17:22:06,284] [SqlExceptionHelper] WARN  SQL Error: 42122, SQLState: 42S22
+[2012-06-12 17:22:06,284] [SqlExceptionHelper] ERROR Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+</system-out>
+  </testcase>
+  <testcase time="0.008" classname="com.test.dao.SiteDAOTest" name="testUpdateSite">
+    <error message="org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1377)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:828)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:781)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:365)
+	at $Proxy26.find(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:240)
+	at $Proxy23.find(Unknown Source)
+	at com.test.dao.jpa.SiteDAOJPA.readSiteBySiteId(SiteDAOJPA.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at $Proxy24.readSiteBySiteId(Unknown Source)
+	at com.test.dao.SiteDAOTest.testUpdateSite(SiteDAOTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:122)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:146)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at $Proxy27.prepareStatement(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:147)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:166)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:145)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1711)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:828)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:289)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:259)
+	at org.hibernate.loader.Loader.loadEntity(Loader.java:2033)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:82)
+	at org.hibernate.loader.entity.AbstractEntityLoader.load(AbstractEntityLoader.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3719)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:449)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:418)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:204)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:251)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:148)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1079)
+	at org.hibernate.internal.SessionImpl.access$2200(SessionImpl.java:172)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2425)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:975)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:807)
+	... 56 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:127)
+	at org.h2.expression.Operation.optimize(Operation.java:171)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Alias.optimize(Alias.java:47)
+	at org.h2.command.dml.Select.prepare(Select.java:738)
+	at org.h2.command.Parser.prepare(Parser.java:202)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:434)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1071)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:234)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:138)
+	... 79 more
+</error>
+    <system-out>[2012-06-12 17:22:06,293] [SqlExceptionHelper] WARN  SQL Error: 42122, SQLState: 42S22
+[2012-06-12 17:22:06,293] [SqlExceptionHelper] ERROR Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_1_, site0_.country_code as country2_1_1_, site0_.default_promotion_id as default4_1_1_, site0_.login_time_limit as login3_1_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_1_, promotion1_.promotion_id as promotion1_0_0_, promotion1_.name as name0_0_ from site site0_ left outer join promotion promotion1_ on site0_.default_promotion_id=promotion1_.promotion_id where site0_.site_id=? [42122-140]
+</system-out>
+  </testcase>
+  <testcase time="0.024" classname="com.test.dao.SiteDAOTest" name="testReadSiteBySiteCode">
+    <error message="org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_, site0_.country_code as country2_1_, site0_.default_promotion_id as default4_1_, site0_.login_time_limit as login3_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_ from site site0_ where site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code=? limit ? [42122-140]" type="javax.persistence.PersistenceException">javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_, site0_.country_code as country2_1_, site0_.default_promotion_id as default4_1_, site0_.login_time_limit as login3_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_ from site site0_ where site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code=? limit ? [42122-140]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1377)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1300)
+	at org.hibernate.ejb.QueryImpl.getSingleResult(QueryImpl.java:318)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:310)
+	at $Proxy28.getSingleResult(Unknown Source)
+	at com.test.dao.jpa.SiteDAOJPA.readSiteBySiteCode(SiteDAOJPA.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at $Proxy24.readSiteBySiteCode(Unknown Source)
+	at com.test.dao.SiteDAOTest.testReadSiteBySiteCode(SiteDAOTest.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.hibernate.exception.SQLGrammarException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_, site0_.country_code as country2_1_, site0_.default_promotion_id as default4_1_, site0_.login_time_limit as login3_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_ from site site0_ where site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code=? limit ? [42122-140]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:122)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:146)
+	at org.hibernate.engine.jdbc.internal.proxy.AbstractProxyHandler.invoke(AbstractProxyHandler.java:81)
+	at $Proxy27.prepareStatement(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:147)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:166)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:145)
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:1711)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:828)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:289)
+	at org.hibernate.loader.Loader.doList(Loader.java:2438)
+	at org.hibernate.loader.Loader.doList(Loader.java:2424)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2254)
+	at org.hibernate.loader.Loader.list(Loader.java:2249)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:470)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:355)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:195)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1248)
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:101)
+	at org.hibernate.ejb.QueryImpl.getSingleResult(QueryImpl.java:285)
+	... 49 more
+Caused by: org.h2.jdbc.JdbcSQLException: Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_, site0_.country_code as country2_1_, site0_.default_promotion_id as default4_1_, site0_.login_time_limit as login3_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_ from site site0_ where site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code=? limit ? [42122-140]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:127)
+	at org.h2.expression.Operation.optimize(Operation.java:171)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Operation.optimize(Operation.java:152)
+	at org.h2.expression.Alias.optimize(Alias.java:47)
+	at org.h2.command.dml.Select.prepare(Select.java:738)
+	at org.h2.command.Parser.prepare(Parser.java:202)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:434)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1071)
+	at org.h2.jdbc.JdbcPreparedStatement.&lt;init&gt;(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:234)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler.continueInvocation(ConnectionProxyHandler.java:138)
+	... 67 more
+</error>
+    <system-out>[2012-06-12 17:22:06,319] [SqlExceptionHelper] WARN  SQL Error: 42122, SQLState: 42S22
+[2012-06-12 17:22:06,320] [SqlExceptionHelper] ERROR Column &quot;SITE0_.LANGUAGE_CODE&quot; not found; SQL statement:
+select site0_.site_id as site1_1_, site0_.country_code as country2_1_, site0_.default_promotion_id as default4_1_, site0_.login_time_limit as login3_1_, site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code as formula0_ from site site0_ where site0_.country_code + &apos;.&apos; + site0_.language_code + &apos;.&apos; + site0_.brand_code=? limit ? [42122-140]
+</system-out>
+  </testcase>
+</testsuite>
