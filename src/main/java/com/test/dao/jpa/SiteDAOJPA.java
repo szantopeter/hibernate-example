@@ -11,13 +11,15 @@ import com.test.domain.Site;
 public class SiteDAOJPA implements SiteDAO {
 
 	//should be threadsafe but available only in managed environment, e.g.: spring
-	@PersistenceContext(name="test")
+	@PersistenceContext(name="iur")
 	EntityManager entityManager;
 	
 	@Override
 	public Site readSiteBySiteId(int siteId) {
 		
 		Site site = entityManager.find(Site.class, siteId);
+
+		entityManager.merge(site);
 
 		return site;
 	}
