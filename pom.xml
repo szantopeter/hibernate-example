@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.test</groupId>
-	<artifactId>hibernate-tutorial-entitymanager-iur</artifactId>
+	<artifactId>hibernate-example</artifactId>
 	<name>Hibernate JPA Tutorial</name>
 	<description>Hibernate tutorial illustrating the use of JPA APIs and annotations for mapping metadata</description>
 	<version>0.0.1-SNAPSHOT</version>
