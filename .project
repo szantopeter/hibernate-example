@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hibernate-tutorial-entitymanager-iur</name>
+	<name>hibernate-example</name>
 	<comment>Hibernate tutorial illustrating the use of JPA APIs and annotations for mapping metadata. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
 	<projects>
 	</projects>
