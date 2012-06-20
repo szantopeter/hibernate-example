@@ -11,7 +11,7 @@ import com.test.domain.Site;
 public class SiteDAOJPA implements SiteDAO {
 
 	//should be threadsafe but available only in managed environment, e.g.: spring
-	@PersistenceContext(name="iur")
+	@PersistenceContext(name="test")
 	EntityManager entityManager;
 	
 	@Override
