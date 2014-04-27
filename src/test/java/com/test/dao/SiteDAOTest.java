@@ -17,7 +17,7 @@ import com.test.domain.Site;
 import junit.framework.TestCase;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:app.xml"})
+@ContextConfiguration(locations={"classpath:testContext.xml"})
 public class SiteDAOTest extends TestCase {
 
 	private Logger logger = LoggerFactory.getLogger(getClass());

@@ -3,16 +3,19 @@ package com.test.dao.jpa;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.test.dao.SiteDAO;
 import com.test.domain.Site;
 
+@Repository
 public class SiteDAOJPA implements SiteDAO {
 
 	//should be threadsafe but available only in managed environment, e.g.: spring
 	@PersistenceContext(name="test")
-	EntityManager entityManager;
+	private EntityManager entityManager;
 	
 	@Override
 	public Site readSiteBySiteId(int siteId) {

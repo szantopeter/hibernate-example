@@ -12,9 +12,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<!-- Skip artifact deployment -->
-		<maven.deploy.skip>true</maven.deploy.skip>
-		<spring.version>3.1.1.RELEASE</spring.version>
+		<spring.version>4.0.3.RELEASE</spring.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
 		<slf4j.version>1.6.1</slf4j.version>
 	</properties>
 
@@ -22,13 +21,13 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.1.4.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-ehcache</artifactId>
-			<version>4.1.4.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 
 		<!-- Logging -->
@@ -144,6 +143,11 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
 
 	</dependencies>
 
@@ -168,8 +172,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>
