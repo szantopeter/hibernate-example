@@ -18,6 +18,10 @@ public enum GENDER {
 
     public static GENDER fromString(String value) {
 
+        if (value == null) {
+            return null;
+        }
+
         for (GENDER gender : GENDER.values()) {
             if (value.equals(gender.toString())) {
                 return gender;

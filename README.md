@@ -5,20 +5,23 @@ This is a JPA 2 Example application, using Hibernate as the persistence provider
 
 - HSQL in memory DB
 - Hibernate 4.0
-	- Database generation
+	- Database generation from entities
 	- @Formula
 	- @Cacheable
 	- @Cache
-- JPA 2
+- JPA 2.1
 	- @JoinColumn
+	- @OneToMany
+	- @ManyToOne
 	- @Id
 	- @Column
 	- @GeneratedValue
 	- @Entity
 	- @NamedQuery
-- Spring
 	- @Transactional
+	- @Converter
+	- @DiscriminatorColumn
 - EHCache
 
 
-To start the project type mvn install
+To start the project race mvn install
