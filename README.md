@@ -24,4 +24,4 @@ This is a JPA 2 Example application, using Hibernate as the persistence provider
 - EHCache
 
 
-To start the project race mvn install
+To start the project run mvn install
