@@ -43,6 +43,17 @@ public class PersonDAO {
 
     }
 
+    public List<Person> readPersonByFirstNameUsingCriteria(String firstName) {
+
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Person> cq = cb.createQuery(Person.class);
+        Root<Person> root = cq.from(Person.class);
+//        ListJoin<Person, Pet> itemNode = root.join(Person_.pets);
+        cq.where( cb.equal(root.get(Person_.firstName), firstName ) );
+
+        return entityManager.createQuery(cq).getResultList();
+    }
+
     @Transactional
     public void storePerson(Person person) {
         entityManager.persist(person);

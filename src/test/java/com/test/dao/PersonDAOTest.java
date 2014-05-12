@@ -80,6 +80,14 @@ public class PersonDAOTest {
     }
 
     @Test
+    public void testReadPersonByFirstNameUsingCriteria() {
+        List<Person> personList = personDAO.readPersonByFirstNameUsingCriteria("Peter");
+
+        assertCorrectNumberOfPeter(personList);
+
+    }
+
+    @Test
     public void testReadPersonById() {
         Person person = personDAO.readPersonById(0);
     }
