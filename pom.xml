@@ -18,6 +18,8 @@
 	</properties>
 
 	<dependencies>
+
+        <!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -29,6 +31,12 @@
 			<artifactId>hibernate-ehcache</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jpamodelgen</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 
 		<!-- Logging -->
 		<dependency>
@@ -172,9 +180,12 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
+                </configuration>
+            </plugin>
+
+ 		</plugins>
+
+
 
 	</build>
 

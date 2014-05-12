@@ -79,6 +79,11 @@ public class PersonDAOTest {
 
     }
 
+    @Test
+    public void testReadPersonById() {
+        Person person = personDAO.readPersonById(0);
+    }
+
     private void assertCorrectNumberOfPeter(List<Person> personList) {
         int peterCount = 0;
         for (Person person : personList) {

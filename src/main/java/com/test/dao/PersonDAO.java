@@ -1,11 +1,16 @@
 package com.test.dao;
 
 import com.test.domain.Person;
+import com.test.domain.Person_;
+import com.test.domain.Pet;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.*;
+import javax.persistence.metamodel.EntityType;
+import javax.persistence.metamodel.Metamodel;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -41,6 +46,12 @@ public class PersonDAO {
     @Transactional
     public void storePerson(Person person) {
         entityManager.persist(person);
+    }
+
+    public Person readPersonById(int i) {
+
+        return entityManager.find(Person.class, i);
+
     }
 
 }

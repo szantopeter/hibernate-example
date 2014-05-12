@@ -85,13 +85,23 @@ public class PetDAOTest {
     }
 
     @Test
-    public void testReadByOwner() {
-        Person owner = originalPets.get(0).getOwner();
-        List<Pet> pets = petDAO.readPetByOwner(owner);
+    public void testReadPetByOwner() {
+        Person originalOwner = originalPets.get(0).getOwner();
+        List<Pet> pets = petDAO.readPetByOwner(originalOwner);
 
         assertEquals(2, pets.size());
-        assertEquals(owner, pets.get(0).getOwner());
+        assertEquals(originalOwner, pets.get(0).getOwner());
 
     }
 
+    @Test
+    public void testReadPetsByOwnerUsingCriteria() {
+
+        Person originalOwner = originalPets.get(0).getOwner();
+        List<Pet> pets = petDAO.readPetsByOwnerUsingCriteria(originalOwner);
+
+        assertEquals(2, pets.size());
+        assertEquals(originalOwner, pets.get(0).getOwner());
+
+    }
 }

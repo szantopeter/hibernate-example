@@ -5,6 +5,7 @@
 
 
 <persistence-unit name="test">
+
         <description>Persistance unit for Hibernate test</description>
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>

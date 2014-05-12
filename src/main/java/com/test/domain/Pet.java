@@ -11,6 +11,7 @@ public abstract class Pet {
     public int id;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "person_id")
     private Person owner;
 
     @Column(insertable=false, updatable=false)

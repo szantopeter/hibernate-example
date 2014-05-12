@@ -2,11 +2,13 @@ package com.test.dao;
 
 import com.test.domain.Person;
 import com.test.domain.Pet;
+import com.test.domain.Pet_;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.criteria.*;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -44,5 +46,17 @@ public class PetDAO {
     @Transactional
     public void deletePet(Pet pet) {
         entityManager.createQuery("delete Pet where id=:id").setParameter("id", pet.getId()).executeUpdate();
+    }
+
+    public List<Pet> readPetsByOwnerUsingCriteria(Person owner) {
+
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Pet> cq = cb.createQuery(Pet.class);
+        Root<Pet> root = cq.from(Pet.class);
+//        Join<Pet, Person> personNode = root.join(Pet_.owner);
+        cq.where( cb.equal(root.get(Pet_.owner), owner ) );
+
+
+        return entityManager.createQuery(cq).getResultList();
     }
 }
